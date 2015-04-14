@@ -3,6 +3,7 @@ export CXX = /usr/local/bin/g++
 export MPICXX = mpicxx
 export LDFLAGS= -pthread -lm 
 export CFLAGS = -Wall -O3 -msse2  -Wno-unknown-pragmas -fPIC
+export SHLIB_OPENMP_CFLAGS = -fopenmp
 
 #ifeq ($(no_omp),1)
 #	CFLAGS += -DDISABLE_OPENMP 
@@ -10,7 +11,7 @@ export CFLAGS = -Wall -O3 -msse2  -Wno-unknown-pragmas -fPIC
 #	CFLAGS += -fopenmp
 #endif
 
-SHLIB_OPENMP_CFLAGS = -fopenmp
+#SHLIB_OPENMP_CFLAGS = -fopenmp
 
 # by default use c++11
 ifeq ($(cxx11),1)
