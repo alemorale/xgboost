@@ -8,10 +8,10 @@ export SHLIB_OPENMP_CFLAGS = -fopenmp
 #ifeq ($(no_omp),1)
 #	CFLAGS += -DDISABLE_OPENMP 
 #else 
-#	CFLAGS += -fopenmp
+	CFLAGS += -fopenmp
 #endif
 
-#SHLIB_OPENMP_CFLAGS = -fopenmp
+SHLIB_OPENMP_CFLAGS = -fopenmp
 
 # by default use c++11
 ifeq ($(cxx11),1)
