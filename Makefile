@@ -5,11 +5,11 @@ export LDFLAGS= -pthread -lm
 export CFLAGS = -Wall -O3 -msse2  -Wno-unknown-pragmas -fPIC
 export SHLIB_OPENMP_CFLAGS = -fopenmp
 
-#ifeq ($(no_omp),1)
-#	CFLAGS += -DDISABLE_OPENMP 
-#else 
+ifeq ($(no_omp),1)
+	CFLAGS += -DDISABLE_OPENMP 
+else 
 	CFLAGS += -fopenmp
-#endif
+endif
 
 SHLIB_OPENMP_CFLAGS = -fopenmp
 
